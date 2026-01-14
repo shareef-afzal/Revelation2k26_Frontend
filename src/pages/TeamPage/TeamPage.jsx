@@ -10,6 +10,7 @@ function TeamPage({Token,setToken}) {
       <Navbar Token={Token} setToken={setToken}/>
       <HeroSection />
       <Teams />
+      {/* random changes */}
       <Footer/>
     </div>
   );
