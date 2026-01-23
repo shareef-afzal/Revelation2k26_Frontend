@@ -32,7 +32,7 @@ const StatBlock = ({ number, label, index }) => {
       className="relative group cursor-pointer"
     >
       {/* Terminal-style container */}
-      <div className="relative bg-neutral-900/40 border border-neutral-800 p-6 md:p-8 rounded-lg backdrop-blur-sm overflow-hidden transition-all duration-300 group-hover:border-red-600/50">
+      <div className="relative bg-neutral-900/40 border border-neutral-800 hover:shadow-[0_0_10px_#ef4444]  p-6 md:p-8 rounded-lg backdrop-blur-sm overflow-hidden transition-all duration-300 group-hover:border-red-600/50">
 
         {/* Decorative "Code" elements */}
         <div className="absolute top-2 right-3 font-mono text-[10px] text-neutral-700 select-none">
