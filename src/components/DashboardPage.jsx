@@ -593,7 +593,8 @@ const handleSendRequest = async (userId, flag, teamId) => {
 
           {eventData.type === "Single" && (
               <>
-                {eventData.isRegistrationOpen && (!individualData.find((user)=>(user._id)===userData._id)) ? <div className="self-start">
+                {!eventData.isRegistrationOpen ? <p>Registration closed</p>:
+                eventData.isRegistrationOpen && (!individualData.find((user)=>(user._id)===userData._id)) ? <div className="self-start">
                   <DashboardButton link="#" content= "Register" onClick={handleCreateClick} />
                 </div>:<p>Already registered</p>}
               </>

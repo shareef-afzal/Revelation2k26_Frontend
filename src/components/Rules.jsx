@@ -28,30 +28,6 @@ const Rules = () => {
 
   console.log(eventData)
 
-
-  // Hardcoded demo data
-  // const demoData = {
-  //   rules: [
-  //     "Provide your G-suite ID/ Gmail ID.",
-  //     "Registration fee 150 INR for participation.",
-  //     "Matches will adhere to specified time controls.",
-  //     "Players must follow the official FIDE rules and regulations.",
-  //     "Participants must record moves using algebraic notation."
-  //   ],
-  //   coordinators: [
-  //     { name: "John Doe", phone: "+91 9876543210" },
-  //     { name: "Jane Smith", phone: "+91 8765432109" }
-  //   ]
-  // };
-
-  // const [eventData, setEventData] = useState({ rules: [], coordinators: [] });
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setEventData(demoData);
-  //   }, 1000);
-  // }, []);
-
   return (
     <div id="ruless" className="bg-black mb-10  text-white p-6 rounded-lg border border-[#8D8D8D]-500 max-w-2xl mx-auto mt-20 max-md:mt-[30px]  text-center max-md:w-[360px] max-sm:w-[320px] max-md:text-sm">
 
