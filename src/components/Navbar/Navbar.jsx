@@ -99,7 +99,7 @@ const Navbar = ({ Token }) => {
         <div className="flex items-center gap-2 sm:gap-4">
           <div className="flex items-center justify-center flex-grow">
             <a
-              href="https://revelation2k25.tech"
+              href="https://revelation2k26.tech"
               target="_blank"
               rel="noopener noreferrer"
             >

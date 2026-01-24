@@ -82,7 +82,7 @@ React.useEffect(() => {
             {/* CHANGED FROM 'fixed' TO 'absolute' to save your Footer */}
 <div className="absolute inset-0 z-0 h-full w-full">
     <img 
-        src="public/backgroundpunith.png"   /* 👈 Uses the import variable (Fixes the path) */
+        src="backgroundpunith.png"   /* 👈 Uses the import variable (Fixes the path) */
         alt="Background" 
         className="w-full h-full object-cover " 
     />
@@ -176,22 +176,22 @@ React.useEffect(() => {
 
                                 <div className="grid grid-cols-2 ml-10 md:ml-0 md:flex md:flex-col  gap-3">
                                     <div className="text-sm flex items-center gap-2 px-3 py-1 md:text-xl font-bold uppercase tracking-wider">
-                                        <img src="public/calendar-regular-full.svg" 
+                                        <img src="calendar-regular-full.svg" 
                                         alt="date"
                                         className="w-8 h-8 object-contain invert"/> {event.date}
                                     </div>
                                     <div className="flex items-center gap-2 px-3 py-1 text-sm md:text-xl font-bold uppercase tracking-wider">
-                                        <img src="public/clock-regular-full.svg" 
+                                        <img src="clock-regular-full.svg" 
                                         alt="Time"
                                         className="w-8 h-8 object-contain invert"/> {event.startTime}
                                     </div>
                                      <div className="flex items-center gap-2 px-3 py-1 text-sm md:text-xl font-bold uppercase tracking-wider">
-                                        <img src="public/location-dot-solid-full.svg" 
+                                        <img src="location-dot-solid-full.svg" 
                                         alt="Venue"
                                         className="w-8 h-8 object-contain invert"/> {event.venue||"Institue hall"}
                                     </div>
                                     <div className="flex items-center gap-2 px-3 py-1 text-sm md:text-xl font-bold uppercase tracking-wider">
-                                        <img src="public/trophy-solid-full.svg" 
+                                        <img src="trophy-solid-full.svg" 
                                         alt="PrizeMoney"
                                         className="w-8 h-8 object-contain invert"/> {event.prizeMoney||"20000/-"}
                                     </div>

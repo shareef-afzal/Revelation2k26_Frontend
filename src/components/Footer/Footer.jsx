@@ -84,7 +84,7 @@ const Footer = () => {
       <div className="mt-6">
         <div className="w-full h-[1px] bg-red-500 opacity-75"></div> {/* Single Red Line */}
         <div className="text-center text-sm pt-4">
-          © 2025 Revelation. All rights reserved.
+          © 2026 Revelation. All rights reserved.
         </div>
       </div>
 
