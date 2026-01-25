@@ -15,6 +15,7 @@ import Login from "./components/Login/Login.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
+import GalleryPage from "./pages/GalleryPage/GalleryPage.jsx";
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("Token"));
@@ -55,6 +56,7 @@ function App() {
           } />
         <Route path="/teams" element={<TeamLeadsPage Token={token} setToken={setToken} />} />
         <Route path="/faqs" element={<Faqs />} />
+        <Route path="/gallery" element={<GalleryPage Token={token} setToken={setToken} />}/>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
