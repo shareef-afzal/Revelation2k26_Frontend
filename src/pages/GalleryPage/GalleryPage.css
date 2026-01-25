@@ -2,7 +2,7 @@
    Root gallery page container
    ========================= */
 .GalleryPage {
-  --navbar-height: 0px;
+  --navbar-height: 60px;
   padding-top: var(--navbar-height);
   min-height: 100vh;
   background: #100000;
@@ -27,7 +27,7 @@
    Navbar layering safety
    ========================= */
 .GalleryPage nav {
-  position: relative;
+  /* position: relative; */
   z-index: 4;
 }
 
