@@ -172,3 +172,10 @@ body {
         transform: translateY(-25px) scale(1.2);
     }
 }
+
+.slider span,
+.slider span a,
+.slider span img {
+    pointer-events: auto;
+    cursor: pointer;
+}

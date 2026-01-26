@@ -48,12 +48,16 @@ function EventSlider() {
       <div className="event_slider">
         <div className="slider" ref={sliderRef}>
           {events.map((event, index) => (
-            <span key={event.id} style={{ "--i": index }}>
-                <Link to={'/events'}>
-                <img src={event.image} alt={event.title}  />
-                {/* <h4>{event.title}</h4> */}
-                </Link>
-              </span>
+            <span
+  key={event.id}
+  style={{ "--i": index }}
+  onClick={() => {
+    window.location.href = "/events";
+  }}
+>
+  <img src={event.image} alt={event.title} />
+</span>
+
           ))}
         </div>
       </div>

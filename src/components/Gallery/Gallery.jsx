@@ -1,5 +1,7 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
+import { Link } from "react-router-dom";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 // Import images
 import img1 from "../../assets/img1.jpg";
@@ -37,51 +39,24 @@ import img32 from "../../assets/img32.jpg";
 import img33 from "../../assets/img33.jpg";
 
 const images = [
-  img1,
-  img2,
-  img3,
-  img4,
-  img5,
-  img6,
-  img7,
-  img8,
-  img9,
-  img10,
-  img12,
-  img13,
-  img14,
-  img15,
-  img16,
-  img17,
-  img18,
-  img19,
-  img20,
-  img21,
-  img22,
-  img23,
-  img24,
-  img25,
-  img26,
-  img27,
-  img11,
-  img28,
-  img29,
-  img30,
-  img31,
-  img32,
-  img33,
+  img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
+  img12, img13, img14, img15, img16, img17, img18, img19, img20,
+  img21, img22, img23, img24, img25, img26, img27, img11,
+  img28, img29, img30, img31, img32, img33,
 ];
 
 const Gallery = () => {
   return (
-    <div className="flex flex-col items-center w-full ">
-      <h1 className="font-playfair text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mt-6  bg-gradient-to-br from-gray-600 via-white to-black text-transparent bg-clip-text mb-14">
+    <div className="flex flex-col items-center w-full">
+      {/* Heading */}
+      <h1 className="font-playfair text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mt-6 bg-gradient-to-br from-gray-600 via-white to-black text-transparent bg-clip-text mb-14">
         GALLERY
       </h1>
 
-      <section className="relative w-full h-fit cursor-grab   overflow-hidden ">
+      {/* Marquee Section */}
+      <section className="relative w-full h-fit cursor-grab overflow-hidden">
         {/* Top overlay */}
-        <div className="absolute z-[4] left-1/2 top-1/2 -translate-x-1/2 -translate-y-[1223dvw]  md:-translate-y-[1212dvw] lg:-translate-y-[1208dvw] xl:-translate-y-[1205dvw] w-[1200vw] h-[1200vw] bg-black rounded-full" />
+        <div className="absolute z-[4] left-1/2 top-1/2 -translate-x-1/2 -translate-y-[1223dvw] md:-translate-y-[1212dvw] lg:-translate-y-[1208dvw] xl:-translate-y-[1205dvw] w-[1200vw] h-[1200vw] bg-black rounded-full" />
 
         <Marquee speed={250} pauseOnHover={true} gradient={false}>
           {images.map((image, index) => (
@@ -97,6 +72,15 @@ const Gallery = () => {
         {/* Bottom overlay */}
         <div className="absolute z-[4] left-1/2 top-1/2 -translate-x-1/2 translate-y-[23dvw] md:translate-y-[12dvw] lg:translate-y-[08dvw] xl:translate-y-[5dvw] w-[1200vw] h-[1200vw] bg-black rounded-full" />
       </section>
+
+      {/* Visit Gallery Button */}
+      <button
+        onClick={() => (window.location.href = "/gallery")}
+        className="mt-10 relative w-[clamp(160px,18vw,200px)] h-[clamp(35px,7vh,50px)] border-2 border-[#d01515] text-white font-['Kode_Mono',monospace] font-bold text-[clamp(14px,1.8vw,18px)] overflow-hidden transition-colors duration-300 hover:bg-[#d01515] hover:border-white"
+      >
+        <span className="relative z-10">VISIT GALLERY</span>
+        <AiOutlineArrowRight className="absolute top-1/2 right-2 transform -translate-y-1/2 w-[clamp(18px,1.8vw,25px)] h-[clamp(12px,1.5vw,18px)] text-white" />
+      </button>
     </div>
   );
 };
