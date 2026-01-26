@@ -50,7 +50,7 @@ const Footer = () => {
               📍 Indian Institute of Engineering Science and Technology Shibpur, 
               Howrah, West Bengal 711103 India
             </p>
-            <p className="mt-2">📞 +91 9830196251</p>
+            <p className="mt-2">📞 +91 9125804980</p>
             <p className="mt-2">📧 gs.cs@cs.iiests.ac.in</p>
           </div>
 
