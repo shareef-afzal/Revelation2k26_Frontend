@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import background from "../../assets/grid.png";
+import background from "../../assets/grid.webp";
 import { API_URL } from '../../config/config';
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ProfilePage = ({setToken}) => {
   const [request, setRequest] = useState([]);

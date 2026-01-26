@@ -1,6 +1,4 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
-// import bgImage from "../../assets/grid.webp";
 
 const PageNotFound = () => {
   const navigate = useNavigate();
@@ -13,7 +11,6 @@ const PageNotFound = () => {
     <div
       className="w-full min-h-screen flex flex-col items-center justify-center gap-y-[50px]"
       style={{
-        // backgroundImage: url(${bgImage}),
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

@@ -1,8 +1,6 @@
-import React from "react";
 import { motion } from "framer-motion";
 import Unstop from "./sponsors/unstop.png";
 import splitkaro from "./sponsors/splitkaro.jpg";
-import blankbox from "./sponsors/grid.webp";
 import techno from "./sponsors/techno1.png";
 import winzo from "./sponsors/winzo.png";
 import smartplanet from "./sponsors/smartplanet.jpg";
@@ -15,13 +13,6 @@ const Sponsorship = () => {
   return (
     <div className="min-h-screen text-white text-center flex flex-col justify-center items-center px-4 sponsors-container">
       {/* Title Section */}
-      {/* <p
-        className="font-playfair text-xl sm:text-lg md:text-xl lg:text-2xl xl:text-2xl font-bold 
-        bg-gradient-to-br from-gray-600 via-white to-black text-transparent bg-clip-text"
-      >
-        Have a Look at our Past
-      </p> */}
-
       <h1
         className="font-playfair text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mt-6 
         bg-gradient-to-br from-gray-600 via-white to-black text-transparent bg-clip-text"

@@ -1,6 +1,5 @@
 @media (max-width: 420px) {
   nav {
-    
     width: 80% !important;
     padding: 6px 10px !important;
     overflow: hidden;
@@ -8,7 +7,7 @@
 
   .mobile-menu {
     width: 75% !important;
-  } 
+  }
 
   .mobile-menu button {
     font-size: 14px !important;

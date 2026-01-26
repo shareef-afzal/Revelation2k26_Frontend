@@ -143,7 +143,7 @@
 
 .gallery-section-title {
   text-align: center;                 /* ✅ center */
-  margin: 70px auto 20px;             /* spacing top & bottom */
+  margin: 80px auto 20px;             /* spacing top & bottom */
   font-family: "Macondo", cursive;
   font-size: 56px;
   font-weight: 400;
@@ -214,24 +214,6 @@
 /* =========================
    Sticky Year Navigation
    ========================= */
-/* .year-nav {
- 
- top: var(--navbar-height);
-  z-index: 3;
-
-  display: flex;
-  justify-content: center;
-   position: fixed;
-  padding: 14px 0;
-  margin-top: 16px;
-
-  /* subtle glass effect */
-  /* background: rgba(16, 0, 0, 0.85); */
-  /* backdrop-filter: blur(6px);
-
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-  transition: background 0.3s ease, box-shadow 0.3s ease; */
-/* }  */
 .year-nav {
   position: fixed;
   top: var(--navbar-height);
@@ -320,7 +302,7 @@
 @media (max-width: 768px) {
   .gallery-section-title {
     font-size: 32px;
-    margin: 60px auto 30px;
+    margin: 80px auto 30px;
   }
 }
 

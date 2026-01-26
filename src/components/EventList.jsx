@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { useRef } from "react";
 import axios from "axios";
 import { API_URL } from '../config/config';
 import { Link } from "react-router-dom";

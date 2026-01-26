@@ -1,4 +1,3 @@
-import React from "react";
 import teamsData from "../../data/teams.json";
 import coreCommitteeData from "../../data/corecommitte.json";
 import TeamSection from "./TeamSection";

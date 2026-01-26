@@ -1,5 +1,3 @@
-import React from "react";
-
 const DashboardButton = ({ link, content, onClick }) => {
   return onClick ? (
     <button
@@ -18,7 +16,7 @@ const DashboardButton = ({ link, content, onClick }) => {
       </span>
     </button>
   ) : (
-    <div 
+    <div
       className="relative ml-2 inline-flex items-center px-4 py-1 text-white text-xs max-sm:text-[10px] max-sm:py-0 md:text-base font-bold border-2 border-red-600 uppercase tracking-widest transition-all duration-300 group"
     >
       {/* Outer border effect */}

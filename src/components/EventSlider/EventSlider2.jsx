@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import event1 from "../../assets/Event_img/BrainDead.webp";
 import event2 from "../../assets/Event_img/HackQuest.webp";
 import event3 from "../../assets/Event_img/Ludo.webp";
@@ -12,7 +12,6 @@ import event10 from "../../assets/Event_img/Valorant.webp";
 import event11 from "../../assets/Event_img/BloodDonation.webp";
 import event12 from "../../assets/Event_img/Bgmi.webp";
 import "./EventSlider2.css";
-import { Link } from "react-router-dom";
 
 const events = [
   { id: 1, image: event1, title: "Brain Dead" },
@@ -49,14 +48,14 @@ function EventSlider() {
         <div className="slider" ref={sliderRef}>
           {events.map((event, index) => (
             <span
-  key={event.id}
-  style={{ "--i": index }}
-  onClick={() => {
-    window.location.href = "/events";
-  }}
->
-  <img src={event.image} alt={event.title} />
-</span>
+              key={event.id}
+              style={{ "--i": index }}
+              onClick={() => {
+                window.location.href = "/events";
+              }}
+            >
+              <img src={event.image} alt={event.title} />
+            </span>
 
           ))}
         </div>

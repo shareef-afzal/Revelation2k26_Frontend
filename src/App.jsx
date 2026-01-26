@@ -1,22 +1,20 @@
-import React from "react";
+import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 import HomePage from "./pages/HomePage/HomePage.jsx";
 import EventsPage from "./pages/EventPage/EventPage.jsx";
-import TeamLeadsPage from "./pages/TeamPage/TeamPage.jsx";
-import UserDashboard from "./components/DashboardPage.jsx";
-import EventDetailsPage from "./components/EventBoard.jsx";
-import EventRules from "./components/Rules.jsx";
-import "./App.css";
-import { useState, useEffect } from "react";
-import ProfilePage from "./pages/ProfilePage/profilepage.jsx";
-import PageNotFound from "./pages/PageNotFound/PageNotFound.jsx";
-import Faqs from "./pages/FAQs/Faqs.jsx";
 import Login from "./components/Login/Login.jsx";
+import ProfilePage from "./pages/ProfilePage/profilepage.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import EventDetailsPage from "./components/EventBoard.jsx";
+import EventRules from "./components/Rules.jsx";
+import UserDashboard from "./components/DashboardPage.jsx";
+import Faqs from "./pages/FAQs/Faqs.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
 import GalleryPage from "./pages/GalleryPage/GalleryPage.jsx";
 import TeamsPage from "./pages/TeamsPage/TeamsPage.jsx";
+import PageNotFound from "./pages/PageNotFound/PageNotFound.jsx";
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("Token"));
@@ -27,7 +25,6 @@ function App() {
   }, []);
 
   console.log(token);
-  // statusCode();
 
   return (
     <div>
@@ -55,7 +52,6 @@ function App() {
               <UserDashboard Token={token} setToken={setToken} />
             </ProtectedRoute>
           } />
-        <Route path="/teamspage" element={<TeamLeadsPage Token={token} setToken={setToken} />} />
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/gallery" element={<GalleryPage Token={token} setToken={setToken} />}/>
         <Route path="/teams" element={<TeamsPage Token={token} setToken={setToken} />}/>

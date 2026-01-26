@@ -1,14 +1,10 @@
-import React from "react";
 import Participants from "../../components/Participants/Participants2";
-// import EventSlider from "../../components/EventSlider/EventSlider";
 import EventSlider2 from "../../components/EventSlider/EventSlider2";
 import Footer from "../../components/Footer/Footer";
 import bgImage from "../../assets/grid.webp";
 import Sponsorship from "../../components/Sponsors/Sponsorship";
 import Gallery from "../../components/Gallery/Gallery";
 import Navbar from "../../components/Navbar/Navbar";
-import AboutUs from "../../components/HeroPage/AboutUs";
-import HeroSection from "../../components/HeroPage/HeroSection";
 import HeroFinal from "../../components/HeroPage/HeroFinal";
 import Faqs from "../FAQs/Faqs";
 const HomePage = ({ Token, setToken }) => {

@@ -7,31 +7,28 @@ function GalleryPage({ Token, setToken }) {
   const canvasRef = useRef(null);
   const [gallerySections, setGallerySections] = useState([]); // [{ folder: '2k25', images: [url, ...] }, ...]
   const [activeYear, setActiveYear] = useState(null);
-const [showYearNav, setShowYearNav] = useState(true);
-const lastScrollY = useRef(0);
+  const [showYearNav, setShowYearNav] = useState(true);
+  const lastScrollY = useRef(0);
 
-useEffect(() => {
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
 
-    if (currentScrollY > lastScrollY.current && currentScrollY > 120) {
-      // scrolling DOWN
-      setShowYearNav(false);
-    } else {
-      // scrolling UP
-      setShowYearNav(true);
-    }
+      if (currentScrollY > lastScrollY.current && currentScrollY > 120) {
+        // scrolling DOWN
+        setShowYearNav(false);
+      } else {
+        // scrolling UP
+        setShowYearNav(true);
+      }
 
-    lastScrollY.current = currentScrollY;
-  };
+      lastScrollY.current = currentScrollY;
+    };
 
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  // -------------------------
-  // Dynamic import (Vite)
-  // -------------------------
   useEffect(() => {
     // This uses Vite's import.meta.glob to eagerly import all image files as URLs.
     // Pattern: adjust if you use a different path.
@@ -68,9 +65,6 @@ useEffect(() => {
     setGallerySections(sections);
   }, []);
 
-  // -------------------------
-  // Canvas animation (kept from your version)
-  // -------------------------
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -186,62 +180,42 @@ useEffect(() => {
       if (rafId) cancelAnimationFrame(rafId);
     };
   }, []);
- const scrollToYear = (year) => {
-  const el = document.getElementById(`year-${year}`);
-  if (el) {
-    setActiveYear(year); 
-    el.scrollIntoView({
-      behavior: "smooth",
-      // block: "start",
-    });
-  }
-};
+  const scrollToYear = (year) => {
+    const el = document.getElementById(`year-${year}`);
+    if (el) {
+      setActiveYear(year);
+      el.scrollIntoView({
+        behavior: "smooth",
+        // block: "start",
+      });
+    }
+  };
 
 
-
-  // -------------------------
-  // Render
-  // -------------------------
   return (
     <div className="GalleryPage">
       <Navbar Token={Token} setToken={setToken} />
 
       {/* Canvas as background layer */}
       <canvas className="GalleryBgCanvas" ref={canvasRef} />
-   <div className={`year-nav ${showYearNav ? "show" : "hide"}`}>
-    <div className="btns">
-      <button
-        className={`year ${activeYear === "2k25" ? "active" : ""}`}
-        onClick={() => scrollToYear("2k25")}
-      >
-        2025
-      </button>
+      <div className={`year-nav ${showYearNav ? "show" : "hide"}`}>
+        <div className="btns">
+          <button
+            className={`year ${activeYear === "2k25" ? "active" : ""}`}
+            onClick={() => scrollToYear("2k25")}
+          >
+            2025
+          </button>
 
-      <button
-        className={`year ${activeYear === "2k24" ? "active" : ""}`}
-        onClick={() => scrollToYear("2k24")}
-      >
-        2024
-      </button>
+          <button
+            className={`year ${activeYear === "2k24" ? "active" : ""}`}
+            onClick={() => scrollToYear("2k24")}
+          >
+            2024
+          </button>
 
-      {/* <button
-        className={`year ${activeYear === "2023" ? "active" : ""}`}
-        onClick={() => scrollToYear("2023")}
-      >
-        2023
-      </button> */}
-    </div>
-  </div>
-      <header className="GalleryHeader">
-        
-        {/* <h1 id="macondo-regular" className="pop">
-          Gallery
-        </h1> */}
- 
-
-
-      </header>
-    
+        </div>
+      </div>
 
       <main className="GalleryMain">
         {gallerySections.length === 0 ? (
@@ -249,16 +223,15 @@ useEffect(() => {
             No gallery images found. Make sure your images are placed in <code>src/assets/gallery/&lt;folder&gt;/</code>
           </div>
         ) : (
-          
+
           gallerySections.map((section) => (
-            <section className="gallery-section" key={section.folder}  id={`year-${section.folder}`}>
+            <section className="gallery-section" key={section.folder} id={`year-${section.folder}`}>
               <h2 className="gallery-section-title">revelation-{section.folder}</h2>
 
               <div className="gallery">
                 {section.images.map((src, idx) => (
                   <div className="photo"
-                  // id={`year-${section.folder}`}
-                   key={`${section.folder}-${idx}`}>
+                    key={`${section.folder}-${idx}`}>
                     <img src={src} alt={`revelation-${section.folder}-${idx + 1}`} loading="eager" decoding="async" />
                   </div>
                 ))}
@@ -267,7 +240,6 @@ useEffect(() => {
           ))
         )}
       </main>
-
       <Footer />
     </div>
   );

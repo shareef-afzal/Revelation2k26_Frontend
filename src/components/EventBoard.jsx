@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom"; // Import React Router
 import DashboardButton from "./DashboardButton.jsx";
 import EventCard from "./EventCard.jsx";
@@ -227,7 +226,6 @@ const EventBoard = () => {
               dayText={eventData.day}
             />
           </div>
-      {/* <EventRules /> */}
         </div>
       </div>
     </div>

@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import axios from "axios";
 import { API_URL } from "../../config/config";
 
-import revelation from "../../assets/revelationlogo1.png";
-import iiestLogo from "../../assets/iiest_logo.png";
-import ascLogo from "../../assets/asce_logo.png";
-import homeIcon from "../../assets/icons/home.png";
-import eventsIcon from "../../assets/icons/calendar.png";
-import sponsorsIcon from "../../assets/icons/sponsor.png";
-import teamsIcon from "../../assets/icons/teams.png";
+import revelation from "../../assets/revelationlogo1.webp";
+import iiestLogo from "../../assets/iiest_logo.webp";
+import ascLogo from "../../assets/asce_logo.webp";
+import homeIcon from "../../assets/icons/home.webp";
+import eventsIcon from "../../assets/icons/calendar.webp";
+import sponsorsIcon from "../../assets/icons/sponsor.webp";
+import teamsIcon from "../../assets/icons/teams.webp";
 import galleryIcon from "../../assets/icons/gallery.png";
 
 const Navbar = ({ Token }) => {
@@ -134,38 +134,6 @@ const Navbar = ({ Token }) => {
             />
           </a>
         </div>
-        {/* //       <nav className="fixed top-0 left-0 w-full bg-gray-900 text-white flex items-center justify-between px-3 py-3 border-2 border-gray-600 rounded-lg shadow-lg z-50 bg-opacity-0 backdrop-blur-lg">
-
-        <div className="flex items-center gap-2 sm:gap-4">
-          <div className="flex items-center justify-center flex-grow"> */}
-        {/* <img
-              src={revelation}
-              alt="Revelation Logo"
-              className="w-28 sm:w-36 md:w-44 h-auto"
-            />
-          </div>
-          <a
-            href="https://www.iiests.ac.in"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={iiestLogo}
-              alt="IIEST Logo"
-              className="w-6 sm:w-8 md:w-10 cursor-pointer hover:scale-110 transition-transform"
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/academic-society-of-computer-engineers-asce-iiest-shibpur/posts/?feedView=all"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={ascLogo}
-              alt="ASC Logo"
-              className="w-6 sm:w-8 md:w-10 cursor-pointer hover:scale-110 transition-transform"
-            />
-           */}
 
         {/* Desktop Menu */}
 
@@ -269,8 +237,6 @@ const Navbar = ({ Token }) => {
               )}
             </div>
           ) : (
-
-            // <button onClick={() => handleNavigation("/login")}>Login</button>
             <button
               className=" mr-4 bg-black-600 text-white px-5 py-2 rounded-lg border-2 border-red-600 transition-all duration-300 hover:bg-black hover:shadow-red-500 shadow-md"
 

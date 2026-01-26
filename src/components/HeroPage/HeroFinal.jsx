@@ -1,7 +1,7 @@
 import "./HeroFinal.css"; // Import the CSS
 import HeroSection from "./HeroSection";
 import AboutUs from "./AboutUs";
-import Img from "../../assets/hero-revelation.png";
+import Img from "../../assets/hero-revelation.webp";
 
 const HeroFinal = () => {
   return (

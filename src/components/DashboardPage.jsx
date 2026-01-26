@@ -4,11 +4,9 @@ import { FaUser  } from "react-icons/fa";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-// import EventData from "../data/EventData.jsx";
 import { useParams } from "react-router-dom";
 import axios from 'axios';
 import { API_URL } from '../config/config';
-import { responsiveFontSizes } from "@mui/material";
 import Navbar from "./Navbar/Navbar.jsx";
 import Footer from "./Footer/Footer.jsx";
 

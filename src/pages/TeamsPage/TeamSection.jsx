@@ -1,6 +1,5 @@
-import React from "react";
 import TeamCard from "./TeamCard";
-import teamsIcon from "../../assets/icons/teams.png";
+import teamsIcon from "../../assets/icons/teams.webp";
 
 /**
  * TeamsPageTeamSection
