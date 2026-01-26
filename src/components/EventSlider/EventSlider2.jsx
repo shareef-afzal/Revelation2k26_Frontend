@@ -52,7 +52,6 @@ function EventSlider() {
   key={event.id}
   style={{ "--i": index }}
   onClick={() => {
-    sliderRef.current.style.animationPlayState = "paused";
     window.location.href = "/events";
   }}
 >
