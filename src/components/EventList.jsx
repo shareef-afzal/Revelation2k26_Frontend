@@ -131,7 +131,7 @@ const EventList = () => {
                                 <h2 className="text-4xl md:text-5xl font-black bold tracking-tighter uppercase leading-[0.9] bg-gradient-to-r from-red-600 to-white bg-clip-text text-transparent pr-2 [-webkit-text-stroke:1px_white]">
                                     {event.name}
                                 </h2>
-                                <div className="grid grid-cols-2 ml-10 md:ml-0 md:flex md:flex-col  gap-3">
+                                <div className="grid grid-cols-2 md:ml-0 md:flex md:flex-col  gap-3">
                                     <div className="text-sm flex items-center gap-2 px-3 py-1 md:text-xl font-bold uppercase tracking-wider">
                                         <img src="calendar-regular-full.svg"
                                             alt="date"
