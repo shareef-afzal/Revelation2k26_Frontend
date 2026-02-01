@@ -1,0 +1,229 @@
+/* Fonts + theme variables (same as TeamsPage) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+
+:root{
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Lato', sans-serif;
+
+  --primary-glow: #ff5e5e;
+  --secondary-glow: #8a1c1c;
+  --bg-dark: #050202;
+  --text-main: #ffffff;
+  --text-muted: #cccccc;
+  --border-color: rgba(255,94,94,0.4);
+}
+
+/* Page-level */
+.EventPage {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-body);
+}
+
+/* Utility class names used in JSX */
+.font-title { font-family: var(--font-heading); }
+.font-goldman { font-family: var(--font-body); } /* maps to Lato here */
+
+/* HERO SECTION - mirrors TeamsPage style but tuned for Event page */
+.EventHero{
+  text-align: center;
+  padding: 60px 20px 20px;
+  position: relative;
+  margin-top: 60px;
+  z-index: 10;
+}
+
+/* breadcrumb — if you add one later */
+.EventHero .breadcrumb {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Subtitle (smaller heading above title) */
+.EventHero h2,
+.EventHero .hero-subtitle {
+  font-family: var(--font-body);
+  font-weight: 300;
+  color: var(--text-muted);
+  margin: 0 auto;
+  display: inline-block;
+  max-width: 700px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* Decorative glowing divider (like TeamsHero::after) */
+.EventHero::after{
+  content: "";
+  display:block;
+  width:100%;
+  max-width:700px;
+  height:1px;
+  background: linear-gradient(90deg, transparent, var(--primary-glow), transparent);
+  margin: 28px auto 0;
+  opacity: 0.8;
+  box-shadow: 0 0 14px var(--primary-glow);
+}
+
+/* Page Title — big, cinematic, glowing and gradient text */
+.EventHero h1,
+.EventHero .hero-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 8px;
+  margin-bottom: 6px;
+  line-height: 0.95;
+  /* responsive size controlled below */
+  color: #fff; /* fallback */
+  text-shadow: 0 0 18px rgba(255,94,94,0.45);
+  /* gradient text */
+  background: linear-gradient(90deg, #ff6767 0%, #ffb6b6 30%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* subtle stroke for crispness */
+  -webkit-text-stroke: 0.6px rgba(255,255,255,0.06);
+}
+
+/* smaller heading under title (if used) */
+.EventHero .hero-lead {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 900px;
+  margin: 0.3rem auto 0;
+}
+
+/* Hero buttons wrapper (if you want to style the Details/Register group) */
+.EventHero .hero-cta {
+  margin-top: 18px;
+  display:flex;
+  gap: 12px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* Example style to harmonize your tailwind buttons with theme */
+.EventHero .hero-cta .btn {
+  padding: 12px 22px;
+  border-radius: 24px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  border: 1px solid var(--border-color);
+  transition: all .25s ease;
+  background: transparent;
+  color: var(--text-main);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+.EventHero .hero-cta .btn.primary {
+  background: linear-gradient(90deg, rgba(255,86,86,0.12), rgba(255,40,40,0.06));
+  border-color: rgba(255,86,86,0.5);
+}
+.EventHero .hero-cta .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(255,94,94,0.12);
+}
+
+/* Small meta row inside hero (date/time/venue) */
+.EventHero .hero-meta {
+  display:flex;
+  gap: 12px;
+  justify-content:center;
+  align-items:center;
+  margin-top: 14px;
+  flex-wrap:wrap;
+  color: var(--text-muted);
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.8px;
+}
+.EventHero .hero-meta img { width:20px; height:20px; object-fit:contain; filter: drop-shadow(0 0 6px rgba(255,94,94,0.18)); }
+
+/* Responsive scale for the title & subtitle (clamp keeps it fluid) */
+.EventHero h1 {
+  font-size: clamp(2.2rem, 8vw, 5.5rem); /* desktop around 4.5-5.5rem */
+}
+.EventHero h2 {
+  font-size: clamp(0.9rem, 2.2vw, 1.15rem);
+}
+
+
+/* Reusable cinematic title (Hero-style) */
+.cinematic-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  line-height: 0.95;
+
+  background: linear-gradient(
+    90deg,
+    #ff6767 0%,
+    #ffb6b6 30%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  text-shadow: 0 0 16px rgba(255, 94, 94, 0.45);
+  -webkit-text-stroke: 0.6px rgba(255, 255, 255, 0.06);
+}
+.event-icon {
+  height: 25px;
+  width: 25px;
+  opacity: 0.6;
+}
+
+/* ===== Events page symmetric repeating background ===== */
+.events-bg {
+  background-image: url("/events-bg.png");
+  background-repeat: repeat-y repeat-x;        /* repeat vertically */
+  /* background-repeat: ; */
+  background-position: center top;    /* keep symmetry */
+  background-size: auto;              /* DO NOT stretch */
+  background-color: #050202;          /* fallback */
+  
+}
+
+
+/* Tweak for very small screens */
+@media (max-width: 460px) {
+  .EventHero h1 { font-size: clamp(1.8rem, 12vw, 3rem); }
+  .EventHero h2 { font-size: 0.85rem; }
+  .EventHero::after { margin-top: 18px; }
+}
+
+.EventListWrapper {
+  width: 92%;
+  margin: 0 auto;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+}
+
+.EventSectionHeader {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding: 10px 18px;
+  border:1px solid var(--border-color);
+  border-radius: 6px 18px 6px 18px;
+  background: linear-gradient(90deg, rgba(40,0,0,0.55) 0%, rgba(0,0,0,0) 100%);
+  box-shadow: inset 0 0 10px rgba(255,0,0,0.06);
+}
+
+.EventHero .hero-bg-overlay {
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(5,2,2,0.55) 0%, rgba(0,0,0,0.8) 100%);
+  z-index:0;
+}
+
+
