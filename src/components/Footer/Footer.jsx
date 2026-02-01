@@ -88,10 +88,10 @@ const Footer = () => {
       </div>
 
       {/* Back to Top Button */}
-      <div className="fixed bottom-4 right-6">
+      <div className="fixed bottom-4 right-6 z-10">
         <button
           onClick={scrollToTop}
-          className="bg-red-600 p-2 rounded-full shadow-lg hover:bg-red-700 transition duration-300 flex items-center justify-center"
+          className="bg-red-600 p-2 rounded-full shadow-lg hover:bg-red-700 transition duration-300 flex items-center justify-center z-10"
         >
           <img src={topArrow} alt="Back to Top" className="w-4 h-4" />
         </button>
