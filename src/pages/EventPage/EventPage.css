@@ -27,7 +27,7 @@
 /* HERO SECTION - mirrors TeamsPage style but tuned for Event page */
 .EventHero{
   text-align: center;
-  padding: 60px 20px 20px;
+  padding: 60px 20px 0px;
   position: relative;
   margin-top: 60px;
   z-index: 10;
@@ -208,6 +208,9 @@
   backdrop-filter: blur(6px);
 }
 
+.EventHero{
+    padding: 30px 20px 0px;
+}
 .EventSectionHeader {
   display:flex;
   align-items:center;
@@ -227,3 +230,18 @@
 }
 
 
+.EventHero h1 {
+  font-size: 3.5rem;          /* MOBILE */
+}
+
+@media (min-width: 640px) {
+  .EventHero h1 {
+    font-size: 4.5rem;          /* small tablets */
+  }
+}
+
+@media (min-width: 768px) {
+  .EventHero h1 {
+    font-size: 5.6rem;        /* desktop */
+  }
+}

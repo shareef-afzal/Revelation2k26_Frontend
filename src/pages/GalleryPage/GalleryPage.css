@@ -1,6 +1,11 @@
 /* =========================
    Root gallery page container
    ========================= */
+   @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+.gallery-section-title{
+  font-family: "Cinzel",sans-serif !important;
+  
+}
 .GalleryPage {
   --navbar-height: 60px;
   padding-top: var(--navbar-height);
@@ -308,9 +313,9 @@
 
 @media (max-width: 480px) {
   .gallery-section-title {
-    font-size: 26px;
+    font-size: 28px;
     letter-spacing: 1px;
-   
+    font-weight: 600;
   }
 }
 @media (max-width: 510px) {

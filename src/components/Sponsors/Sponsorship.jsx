@@ -17,7 +17,7 @@ const Sponsorship = () => {
         className="font-playfair text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mt-6 
         bg-gradient-to-br from-gray-600 via-white to-black text-transparent bg-clip-text"
       >
-        SPONSORS
+        PAST SPONSORS
       </h1>
       {/* Sponsor Grid Container */}
       <div className="container mx-auto flex flex-col justify-center items-center gap-8 md:gap-16 mt-16">
