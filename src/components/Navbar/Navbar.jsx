@@ -248,9 +248,9 @@ const Navbar = ({ Token }) => {
           {[
             { id: "/", icon: homeIcon, label: "Home" },
             { id: "/events", icon: eventsIcon, label: "Events" },
-            { id: "/sponsors", icon: sponsorsIcon, label: "Sponsors" },
             { id: "/teams", icon: teamsIcon, label: "Teams" },
             { id: "/gallery", icon: galleryIcon, label: "Gallery" },
+            { id: "/sponsors", icon: sponsorsIcon, label: "Sponsors" },
           ].map(({ id, icon, label }) => (
             <button
               key={id}

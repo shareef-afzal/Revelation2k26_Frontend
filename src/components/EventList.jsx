@@ -11,7 +11,200 @@ const EventList = () => {
     // 1. Start with a default (e.g., true for Desktop layout, or false for Mobile)
     // DO NOT put window.innerWidth here.
     const [isDesktop, setIsDesktop] = React.useState(true);
-    const [events, setEvents] = useState([]);
+    // const [events, setEvents] = useState([]);
+
+    const events = [
+        {
+            _id: "696f98192e1caeabab869ec9",
+
+            name: "zinzo",
+            description: "online game",
+            type: "Single",
+            venue: "Hom",
+
+            day: 1,
+
+            startTime: "2026-02-06T13:00:00.000Z",
+            endTime: "2026-02-08T12:59:00.000Z",
+
+            prizePool: 50000,
+            registrationAmount: 500,
+            registrationFrom: "website",
+            registrationLink: null,
+            isRegistrationOpen: true,
+
+            teamSize: {
+                min: 1,
+                max: 1
+            },
+
+            rules: [
+                "You should have phone",
+                "You should be human"
+            ],
+
+            backgroundImage: {
+                url: "https://res.cloudinary.com/dgioskvki/image/upload/v1768921110/revelation2k26/events/ks6tcp3tftiihy1xvjqe.png",
+                filename: "revelation2k26/events/ks6tcp3tftiihy1xvjqe",
+                _id: "696f98192e1caeabab869ecb"
+            },
+
+            posterImage: {
+                url: "https://res.cloudinary.com/dgioskvki/image/upload/v1768921110/revelation2k26/events/u5u4eyncttgle8udulry.png",
+                filename: "revelation2k26/events/u5u4eyncttgle8udulry",
+                _id: "696f98192e1caeabab869eca"
+            },
+
+            eventGif: {
+                url: "https://res.cloudinary.com/dgioskvki/image/upload/v1768921112/revelation2k26/events/l3gmiy311xiqck8nszxj.gif",
+                filename: "revelation2k26/events/l3gmiy311xiqck8nszxj",
+                _id: "696f98192e1caeabab869ecc"
+            }
+        },
+
+        {
+            _id: "696f9b977c64fc56120d600e",
+
+            name: "codestorm",
+            description: "Hi",
+            type: "Team",
+            venue: "NB",
+
+            day: 2,
+
+            startTime: "2026-02-07T09:42:00.000Z",
+            endTime: "2026-02-08T09:42:00.000Z",
+
+            prizePool: 12000,
+            registrationAmount: 120,
+            registrationFrom: "website",
+            registrationLink: null,
+            isRegistrationOpen: true,
+
+            teamSize: {
+                min: 3,
+                max: 5
+            },
+
+            rules: [
+                "Bye"
+            ],
+
+            backgroundImage: {
+                url: "https://res.cloudinary.com/dgioskvki/image/upload/v1768922004/revelation2k26/events/f7blkxhoelwdp7eopni6.png",
+                filename: "revelation2k26/events/f7blkxhoelwdp7eopni6",
+                _id: "696f9b977c64fc56120d6010"
+            },
+
+            posterImage: {
+                url: "https://res.cloudinary.com/dgioskvki/image/upload/v1768922005/revelation2k26/events/wn9xuqaysapcjupeygud.png",
+                filename: "revelation2k26/events/wn9xuqaysapcjupeygud",
+                _id: "696f9b977c64fc56120d600f"
+            },
+
+            eventGif: {
+                url: "https://res.cloudinary.com/dgioskvki/image/upload/v1768922006/revelation2k26/events/cqcvkrsgzpjjlbj08mh0.gif",
+                filename: "revelation2k26/events/cqcvkrsgzpjjlbj08mh0",
+                _id: "696f9b977c64fc56120d6011"
+            }
+        },
+
+        {
+            _id: "696f98192e1caeabab869ec9",
+
+            name: "zinzo",
+            description: "online game",
+            type: "Single",
+            venue: "Hom",
+
+            day: 1,
+
+            startTime: "2026-02-06T13:00:00.000Z",
+            endTime: "2026-02-08T12:59:00.000Z",
+
+            prizePool: 50000,
+            registrationAmount: 500,
+            registrationFrom: "website",
+            registrationLink: null,
+            isRegistrationOpen: true,
+
+            teamSize: {
+                min: 1,
+                max: 1
+            },
+
+            rules: [
+                "You should have phone",
+                "You should be human"
+            ],
+
+            backgroundImage: {
+                url: "https://res.cloudinary.com/dgioskvki/image/upload/v1768921110/revelation2k26/events/ks6tcp3tftiihy1xvjqe.png",
+                filename: "revelation2k26/events/ks6tcp3tftiihy1xvjqe",
+                _id: "696f98192e1caeabab869ecb"
+            },
+
+            posterImage: {
+                url: "https://res.cloudinary.com/dgioskvki/image/upload/v1768921110/revelation2k26/events/u5u4eyncttgle8udulry.png",
+                filename: "revelation2k26/events/u5u4eyncttgle8udulry",
+                _id: "696f98192e1caeabab869eca"
+            },
+
+            eventGif: {
+                url: "https://res.cloudinary.com/dgioskvki/image/upload/v1768921112/revelation2k26/events/l3gmiy311xiqck8nszxj.gif",
+                filename: "revelation2k26/events/l3gmiy311xiqck8nszxj",
+                _id: "696f98192e1caeabab869ecc"
+            }
+        },
+
+        {
+            _id: "696f9b977c64fc56120d600e",
+
+            name: "codestorm",
+            description: "Hi",
+            type: "Team",
+            venue: "NB",
+
+            day: 2,
+
+            startTime: "2026-02-07T09:42:00.000Z",
+            endTime: "2026-02-08T09:42:00.000Z",
+
+            prizePool: 12000,
+            registrationAmount: 120,
+            registrationFrom: "website",
+            registrationLink: null,
+            isRegistrationOpen: true,
+
+            teamSize: {
+                min: 3,
+                max: 5
+            },
+
+            rules: [
+                "Bye"
+            ],
+
+            backgroundImage: {
+                url: "https://res.cloudinary.com/dgioskvki/image/upload/v1768922004/revelation2k26/events/f7blkxhoelwdp7eopni6.png",
+                filename: "revelation2k26/events/f7blkxhoelwdp7eopni6",
+                _id: "696f9b977c64fc56120d6010"
+            },
+
+            posterImage: {
+                url: "https://res.cloudinary.com/dgioskvki/image/upload/v1768922005/revelation2k26/events/wn9xuqaysapcjupeygud.png",
+                filename: "revelation2k26/events/wn9xuqaysapcjupeygud",
+                _id: "696f9b977c64fc56120d600f"
+            },
+
+            eventGif: {
+                url: "https://res.cloudinary.com/dgioskvki/image/upload/v1768922006/revelation2k26/events/cqcvkrsgzpjjlbj08mh0.gif",
+                filename: "revelation2k26/events/cqcvkrsgzpjjlbj08mh0",
+                _id: "696f9b977c64fc56120d6011"
+            }
+        }
+    ];
+
 
     const fetchEvents = async () => {
         try {
@@ -23,10 +216,10 @@ const EventList = () => {
         }
     }
 
-    useEffect(() => {
-        fetchEvents();
-    }, []);
-    console.log(events);
+    // useEffect(() => {
+    //     fetchEvents();
+    // }, []);
+    // console.log(events);
 
     const formatDate = (event) => {
         const date = new Date(event.startTime);
@@ -104,7 +297,7 @@ const EventList = () => {
                             className={`
                                  relative flex flex-col ${isEven ? 'md:flex-row md:self-start' : 'ml-auto md:flex-row-reverse md:self-end'} 
                                 items-stretch md:items-stretch
-                                w-[95%] md:mx-0 md:w-[85%] lg:w-[64%] 
+                                w-[85%] md:mx-0 md:w-[85%] lg:w-[64%] 
                                 bg-white/5 backdrop-blur-[12px] border-y border-white/30 shadow-2xl overflow-hidden relative
                                 
                                 /* DYNAMIC CORNERS & BORDERS */
